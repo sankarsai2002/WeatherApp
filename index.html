@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="leftSide" id="leftSide">
+            <input type="text" name="inputLocation" id="inputLocation" class="inputLocation" placeholder="Enter Location">
+            <button class="searchBtn" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="currentWeatherImage" id="currentWeatherImage">
+                <!-- Image will be added here By JS -->
+            </div>
+
+            <div class="presentInfo">
+                <div class="presentTemp temperature" id="presentTemp">
+
+                </div>
+                <div class="presentDayTime" id="presentDayTime">
+
+                </div>
+
+                <div class="otherInfo">
+                    <div class="preCondition" id="preCondition">
+
+                    </div>
+                    <div class="prePresp" id="prePresp">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightSide">
+            <!-- hello -->
+        </div>
+    </div>
+    <!-- <script src="./app.js"></script> -->
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
