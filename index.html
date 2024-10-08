@@ -8,34 +8,191 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="leftSide" id="leftSide">
-            <input type="text" name="inputLocation" id="inputLocation" class="inputLocation" placeholder="Enter Location">
-            <button class="searchBtn" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <div class="currentWeatherImage" id="currentWeatherImage">
-                <!-- Image will be added here By JS -->
-            </div>
-
-            <div class="presentInfo">
-                <div class="presentTemp temperature" id="presentTemp">
-
+    <div class="mainContainer">
+        <div class="container">
+            <div class="leftSide" id="leftSide">
+                <input type="text" name="inputLocation" id="inputLocation" class="inputLocation" placeholder="Enter Location">
+                <button class="searchBtn" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="currentWeatherImage" id="currentWeatherImage">
+                    <!-- Image will be added here By JS -->
                 </div>
-                <div class="presentDayTime" id="presentDayTime">
-
-                </div>
-
-                <div class="otherInfo">
-                    <div class="preCondition" id="preCondition">
-
+    
+                <div class="presentInfo">
+                    <div class="presentTemp temperature" id="presentTemp">
+    
                     </div>
-                    <div class="prePresp" id="prePresp">
-
+                    <div class="presentDayTime" id="presentDayTime">
+    
+                    </div>
+    
+                    <div class="otherInfo">
+                        <div class="preCondition" id="preCondition">
+    
+                        </div>
+                        <div class="prePresp" id="prePresp">
+    
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="rightSide">
-            <!-- hello -->
+            <div class="rightSide">
+                <div class="selectingRow">
+                    <div class="todayWeekBtns">
+                        <button class="todayBtn" id="todayBtn">Today</button>
+                        <button class="weekBtn" id="weekBtn">Week</button>
+                    </div>
+                    <div class="celsiusFahrenheitBtns">
+                        <button class="celsiusBtn" id="celsiusBtn">°C</button>
+                        <button class="fahrenheitBtn" id="fahrenheitBtn">°F</button>
+                    </div>
+                </div>
+
+                <div class="rightInfo">
+                    <div class="Hours">
+                        <div class="hourlyInfo" id="hourlyInfo">
+                            <div class="eachHourInfo" id="eachhourInfo0">
+                                <div class="eachHour" id="eachHour0">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon1">
+                                <div class="eachTemp" id="eachTemp0">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo1">
+                                <div class="eachHour" id="eachHour1">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon1">
+                                <div class="eachTemp" id="eachTemp1">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo2">
+                                <div class="eachHour" id="eachHour2">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon2">
+                                <div class="eachTemp" id="eachTemp2">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo3">
+                                <div class="eachHour" id="eachHour3">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon3">
+                                <div class="eachTemp" id="eachTemp3">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo4">
+                                <div class="eachHour" id="eachHour4">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon4">
+                                <div class="eachTemp" id="eachTemp4">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo5">
+                                <div class="eachHour" id="eachHour5">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon5">
+                                <div class="eachTemp" id="eachTemp5">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo6">
+                                <div class="eachHour" id="eachHour6">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon6">
+                                <div class="eachTemp" id="eachTemp6">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo7">
+                                <div class="eachHour" id="eachHour7">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon7">
+                                <div class="eachTemp" id="eachTemp7">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo8">
+                                <div class="eachHour" id="eachHour8">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon8">
+                                <div class="eachTemp" id="eachTemp8">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo9">
+                                <div class="eachHour" id="eachHour9">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon9">
+                                <div class="eachTemp" id="eachTemp9">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo10">
+                                <div class="eachHour" id="eachHour10">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon10">
+                                <div class="eachTemp" id="eachTemp10">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo11">
+                                <div class="eachHour" id="eachHour11">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon11">
+                                <div class="eachTemp" id="eachTemp11">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo12">
+                                <div class="eachHour" id="eachHour12">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon12">
+                                <div class="eachTemp" id="eachTemp12">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo13">
+                                <div class="eachHour" id="eachHour13">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon13">
+                                <div class="eachTemp" id="eachTemp13">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo14">
+                                <div class="eachHour" id="eachHour14">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon14">
+                                <div class="eachTemp" id="eachTemp14">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo15">
+                                <div class="eachHour" id="eachHour15">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon15">
+                                <div class="eachTemp" id="eachTemp15">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo16">
+                                <div class="eachHour" id="eachHour16">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon16">
+                                <div class="eachTemp" id="eachTemp16">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo17">
+                                <div class="eachHour" id="eachHour17">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon17">
+                                <div class="eachTemp" id="eachTemp17">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo18">
+                                <div class="eachHour" id="eachHour18">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon18">
+                                <div class="eachTemp" id="eachTemp18">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo19">
+                                <div class="eachHour" id="eachHour19">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon19">
+                                <div class="eachTemp" id="eachTemp19">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo20">
+                                <div class="eachHour" id="eachHour20">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon20">
+                                <div class="eachTemp" id="eachTemp20">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo21">
+                                <div class="eachHour" id="eachHour21">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon21">
+                                <div class="eachTemp" id="eachTemp21">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo22">
+                                <div class="eachHour" id="eachHour22">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon22">
+                                <div class="eachTemp" id="eachTemp22">23°C</div>
+                            </div>
+                            <div class="eachHourInfo" id="eachhourInfo23">
+                                <div class="eachHour" id="eachHour23">00:00 AM</div>
+                                <img src="https://i.ibb.co/PZQXH8V/27.png" alt="ICON" class="eachConditon" id="eachConditon23">
+                                <div class="eachTemp" id="eachTemp23">23°C</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="Weeks">
+                        <div class="weeklyInfo" id="weeklyInfo">
+                            <h1 style="color: red;">Hello</h1>
+                        </div>
+                    </div>
+
+                    <div class="mainHighlights">
+                        <h1>hello</h1>
+                        <h1>hello</h1>
+                        <h1>hello</h1>
+                        <h1>hello</h1>
+                        <h1>hello</h1>
+                        <h1>hello</h1>
+                        <h1>hello</h1>
+                        <h1>hello</h1>
+                        <h1>hello</h1>
+                        <h1>hello</h1>
+                    </div>
+                </div>                
+            </div>
         </div>
     </div>
     <!-- <script src="./app.js"></script> -->

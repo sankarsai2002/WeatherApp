@@ -3,19 +3,30 @@
     padding: 0px;
 }
 
+.hideTemp{
+    display: none;
+}
+
+.mainContainer{
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container{
-    margin: 38px 37px;
-    width: 95dvw;
+    /* margin: 38px 50px; */
+    width: 90dvw;
     height: 90dvh;
-    background-color: #ebebeb;
+    background-color: #f5f5f5;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
     border-radius: 15px;
     display: flex;
 }
 
 .container .leftSide{
-    padding-left: 2dvw;
-    width: 22dvw;
+    padding: 0 2dvw;
+    width: 20dvw;
     height: 90dvh;
     background-color: #bcbcbc;
     border-top-left-radius: 15px;
@@ -79,3 +90,83 @@
     font-size: 16px;
     font-weight: 300;
 }
+
+/* rightSide Starts Here */
+
+.rightSide{
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.rightSide .selectingRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.rightSide .selectingRow .celsiusBtn,.fahrenheitBtn{
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #ffffff;
+    margin-left: 15px;
+}
+
+.rightSide .selectingRow .celsiusBtn:hover,.fahrenheitBtn:hover{
+    background-color: black;
+    color: #ffffff;
+}
+
+.rightSide .selectingRow .todayBtn,.weekBtn{
+    margin-right: 20px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.rightSide .selectingRow .todayBtn:hover,.weekBtn:hover{
+    color: #65bff7;
+}
+
+.selected{
+    color: #65bff7;
+}
+
+.rightInfo{
+    width: 68dvw;
+}
+
+.rightSide .rightInfo .hourlyInfo{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 30px;
+}
+
+.rightInfo .eachHourInfo{
+    width: 7dvw;
+    height: 15dvh;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 8px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.rightInfo .eachHourInfo .eachHour,.eachTemp{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.rightInfo .eachHourInfo img{
+    width: 60%;
+    object-fit: contain;
+    padding: 8px 0px;
+}
+/* rightSide Ends Here */
