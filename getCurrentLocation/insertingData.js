@@ -22,7 +22,7 @@ function insertingTodayData(jsonData){
 
     i=0;
     eachTemp.forEach((value)=>{
-        value.innerHTML = jsonData.days[0].hours[i].temp+"°c";
+        value.innerHTML = jsonData.days[0].hours[i].temp+"°C";
         i++;
     });
 
@@ -40,8 +40,6 @@ function insertingWeekData(jsonData){
     let date = new Date(ymd[0],ymd[1]-1,ymd[2]);
     let weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-    // console.log(weekDays[date.getDay()]);
-    
     
     let i = 0;
     eachWeek.forEach((value)=>{
@@ -56,9 +54,10 @@ function insertingWeekData(jsonData){
         i++;
     });
     
+    // 23°<div class="degree">C</div>
     i = 0;
     eachweekTemp.forEach((value)=>{
-        value.innerHTML = jsonData.days[i].temp+"°c";
+        value.innerHTML = jsonData.days[i].temp+"°C";
         i++;
     });
 }

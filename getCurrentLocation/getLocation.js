@@ -24,7 +24,7 @@ async function getWeatherInfo(city){
     let preCondition = document.getElementById("preCondition");
     let prePresp = document.getElementById("prePresp");
 
-    presentTemp.innerHTML = `${temp}°<sup>c</sup>`;
+    presentTemp.innerHTML = `${temp}<sup class="unit">°C</sup>`;
     
     let date1 = jsonData.days[0].datetime.split('-');
     presentDayTime.innerText = convertDateTime(date1[0],date1[1]-1,date1[2],...time1);//converting the date and time in required format (monday 1.00 PM)
