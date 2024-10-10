@@ -39,8 +39,8 @@ document.getElementById("todayBtn").addEventListener("click",()=>{
     document.querySelector(".Hours").classList.remove("hideTemp");
 });
 
-document.getElementById("celsiusBtn").addEventListener("click",(e)=>{
-    e.classList.add("unitActive");
+document.getElementById("celsiusBtn").addEventListener("click",()=>{
+    document.getElementById("celsiusBtn").classList.add("unitActive");
     document.getElementById("fahrenheitBtn").classList.remove("unitActive");
 
     let unit = document.querySelector(".unit");
@@ -61,8 +61,9 @@ document.getElementById("celsiusBtn").addEventListener("click",(e)=>{
     
 });
 
-document.getElementById("fahrenheitBtn").addEventListener("click",()=>{
-    e.classList.add("unitActive");
+document.getElementById("fahrenheitBtn").addEventListener("click",(e)=>{
+    // e.classList.add("unitActive");
+    document.getElementById("fahrenheitBtn").classList.add("unitActive");
     document.getElementById("celsiusBtn").classList.remove("unitActive");
 
     let unit = document.querySelector(".unit");
