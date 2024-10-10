@@ -1,13 +1,8 @@
 import convertTo12 from "./convert_To_12Hour.js";
-import linksOnTime from "./LinksBasedOnTime.js";
+import {linksOnTime , linksOnWeek} from "./LinksBasedOnTime.js";
 
 function insertingTodayData(jsonData){
-    console.log("inserting today");
-    
-    document.querySelector(".todayBtn").classList.add("selected");
-    document.querySelector(".weekBtn").classList.remove("selected");
-    document.querySelector(".Weeks").classList.add("hideTemp");
-    document.querySelector(".Hours").classList.remove("hideTemp");
+    // console.log("inserting today");
     let eachHour = document.querySelectorAll("[id^='eachHour']");
     let eachConditon = document.querySelectorAll("[id^='eachConditon']");
     let eachTemp = document.querySelectorAll("[id^='eachTemp']");
@@ -19,7 +14,7 @@ function insertingTodayData(jsonData){
     })
     
     i = 0;
-    eachConditon.forEach((value)=>{
+    eachConditon.forEach((value)=>{        
         let [backgroundURL,currentWeatherIconSRC] = linksOnTime(jsonData,jsonData.days[0].hours[i].datetime.split(":"),jsonData.days[0].sunset.split(":"));
         value.setAttribute("src",currentWeatherIconSRC);
         i++;
@@ -30,16 +25,42 @@ function insertingTodayData(jsonData){
         value.innerHTML = jsonData.days[0].hours[i].temp+"°c";
         i++;
     });
+
+    insertingWeekData(jsonData);
 }
 
 function insertingWeekData(jsonData){
-    console.log("Inserting week");
-    
-    document.querySelector(".todayBtn").classList.remove("selected");
-    document.querySelector(".weekBtn").classList.add("selected");
-    document.querySelector(".Hours").classList.add("hideTemp");
-    document.querySelector(".Weeks").classList.remove("hideTemp");
+    // console.log("Inserting week");
 
+    let eachWeek = document.querySelectorAll("[id^='eachWeek']");
+    let eachconditonweek = document.querySelectorAll("[id^='eachconditonweek']");
+    let eachweekTemp = document.querySelectorAll("[id^='eachweekTemp']");
+
+    let ymd = jsonData.days[0].datetime.split("-");
+    let date = new Date(ymd[0],ymd[1]-1,ymd[2]);
+    let weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    // console.log(weekDays[date.getDay()]);
+    
+    
+    let i = 0;
+    eachWeek.forEach((value)=>{
+        value.innerHTML = weekDays[(date.getDay()+i)%7];
+        i++;
+    });
+
+    i = 0;
+    eachconditonweek.forEach((value)=>{
+        let  dayWeatherIconSRC = linksOnWeek(jsonData,i);
+        value.setAttribute("src",dayWeatherIconSRC);
+        i++;
+    });
+    
+    i = 0;
+    eachweekTemp.forEach((value)=>{
+        value.innerHTML = jsonData.days[i].temp+"°c";
+        i++;
+    });
 }
 
 export {insertingTodayData,insertingWeekData}

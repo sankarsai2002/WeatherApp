@@ -32,21 +32,22 @@ searchBtn.addEventListener("click",()=>{
 });
 
 document.getElementById("weekBtn").addEventListener("click",async ()=>{
-    let rawData = await cityIdentification();
-    let jsonData = await rawData.json();
 
-    let rawData1 = await fetchingWeather(jsonData.city);
-    let jsonData1 = await rawData1.json();
+    document.querySelector(".todayBtn").classList.remove("selected");
+    document.querySelector(".weekBtn").classList.add("selected");
+    document.querySelector(".Hours").classList.add("hideTemp");
+    document.querySelector(".Weeks").classList.remove("hideTemp");
 
-    insertingWeekData(jsonData1);
+    // console.log("Week Btn Clicked");
+    
 });
 
 document.getElementById("todayBtn").addEventListener("click",async ()=>{
-    let rawData = await cityIdentification();
-    let jsonData = await rawData.json();
-
-    let rawData1 = await fetchingWeather(jsonData.city);
-    let jsonData1 = await rawData1.json();
-
-    insertingTodayData(jsonData1);
+    document.querySelector(".todayBtn").classList.add("selected");
+    document.querySelector(".weekBtn").classList.remove("selected");
+    document.querySelector(".Weeks").classList.add("hideTemp");
+    document.querySelector(".Hours").classList.remove("hideTemp");
+    
+    // console.log("Today btn Clicked");
+    
 });

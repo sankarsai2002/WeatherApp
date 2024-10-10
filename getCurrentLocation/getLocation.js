@@ -2,7 +2,7 @@ import convertDateTime from "./ConvertDateTime.js";
 
 import {insertingTodayData,insertingWeekData} from "./insertingData.js"
 
-import linksOnTime from "./LinksBasedOnTime.js";
+import {linksOnTime , linksOnWeek} from "./LinksBasedOnTime.js";
 
 import  {fetchingWeather,cityIdentification} from "./fetchingData.js";
 

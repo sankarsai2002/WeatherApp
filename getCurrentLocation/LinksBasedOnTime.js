@@ -1,4 +1,4 @@
-export default function linksOnTime(jsonData,time1,time2){
+function linksOnTime(jsonData,time1,time2){
     let date1 = jsonData.days[0].datetime.split('-');
     let dateStamp1 =  new Date(date1[0],date1[1]-1,date1[2],...time1);
     // console.log(dateStamp1);   
@@ -52,3 +52,20 @@ export default function linksOnTime(jsonData,time1,time2){
     // Rain, Partially cloudy
     return [backgroundURL, currentWeatherIconSRC]
 }
+
+function linksOnWeek(jsonData,dayNum){
+    let dayWeatherIconSRC = "";
+    let condition = jsonData.days[dayNum].conditions.toLowerCase();
+    if(condition.includes("clear")){
+        dayWeatherIconSRC = "https://i.ibb.co/rb4rrJL/26.png";
+    }
+    else if(condition.includes("rain")){
+        dayWeatherIconSRC = "https://i.ibb.co/kBd2NTS/39.png";
+    }
+    else{
+        dayWeatherIconSRC = "https://i.ibb.co/PZQXH8V/27.png";
+    }
+    return dayWeatherIconSRC;
+}
+
+export {linksOnTime , linksOnWeek}
