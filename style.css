@@ -223,3 +223,51 @@
 }
 
 /* rightSide Ends Here */
+
+/* main High lights Starts Here */
+
+.mainHighlights{
+    padding: 35px;
+}
+
+.mainHighlights .HighlightsTitle{
+    font-size: 25px;
+}
+
+.mainHighlights .allHighlights{
+    padding: 0px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.allHighlights .mainbox{
+    border-radius: 10px;
+    width: 17dvw;
+    height: 15dvh;
+    padding: 10px;
+    margin: 10px 0px;
+    margin-right: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mainbox .subHighLightHead,.subHighLightFoot{
+    font-size: 15px;
+    color: #888888;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.mainbox .highLightInfo{
+    font-size: 30px;
+    color: #5a5a5a;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.highLightInfo{
+    margin-top: 9%;
+    text-align: center;
+}
+/* main High lights Ends Here */
