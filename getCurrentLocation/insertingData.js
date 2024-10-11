@@ -1,5 +1,6 @@
 import convertTo12 from "./convert_To_12Hour.js";
 import {linksOnTime , linksOnWeek} from "./LinksBasedOnTime.js";
+import insertHighlights from "./insertingHighlightsData.js";
 
 function insertingTodayData(jsonData){
     // console.log("inserting today");
@@ -27,6 +28,7 @@ function insertingTodayData(jsonData){
     });
 
     insertingWeekData(jsonData);
+    insertHighlights(jsonData)
 }
 
 function insertingWeekData(jsonData){

@@ -118,6 +118,7 @@
     font-weight: 500;
     background-color: #ffffff;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .rightSide .selectingRow .celsiusBtn:hover,.fahrenheitBtn:hover{
@@ -137,6 +138,7 @@
     border: none;
     font-size: 18px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .rightSide .selectingRow .todayBtn:hover,.weekBtn:hover{
@@ -147,14 +149,14 @@
     color: #65bff7;
 }
 
-.rightInfo{
-    width: 68dvw;
+.rightInfo .Hours{
+    width: 65dvw;
 }
 
 .rightSide .rightInfo .hourlyInfo{
     display: flex;
     flex-wrap: wrap;
-    margin: 0px 30px;
+    margin: 0px 0px 0px 30px;
 }
 
 .rightInfo .eachHourInfo{
@@ -174,16 +176,7 @@
     font-size: 16px;
     font-weight: 600;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* display: flex; */
-    /* position: relative; */
 }
-
-/* 
-.eachTemp .degree{
-    position: absolute;
-    top: 0px;
-    left: 25px;
-} */
 
 .rightInfo .eachHourInfo img{
     width: 60%;
@@ -194,7 +187,8 @@
 .rightSide .rightInfo .Weeks .weeklyInfo{
     display: flex;
     flex-wrap: wrap;
-    margin: 0px 30px;
+    margin-left: 30px;
+    width: 64dvw;
 }
 
 .rightSide .rightInfo .Weeks .weeklyInfo .eachweekInfo{
@@ -227,7 +221,8 @@
 /* main High lights Starts Here */
 
 .mainHighlights{
-    padding: 35px;
+    padding: 45px 0px 15px 35px;
+    width: 60dvw;
 }
 
 .mainHighlights .HighlightsTitle{
@@ -236,7 +231,7 @@
 
 .mainHighlights .allHighlights{
     padding: 0px;
-    margin-top: 40px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -246,8 +241,7 @@
     width: 17dvw;
     height: 15dvh;
     padding: 10px;
-    margin: 10px 0px;
-    margin-right: 10px;
+    margin: 10px 20px 10px 0px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -271,3 +265,36 @@
     text-align: center;
 }
 /* main High lights Ends Here */
+
+/* Developer Info Starts Here */
+
+.maker{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    border-top: 1px solid #d1d1d1;
+    padding-top: 22px;
+}
+
+.maker a{
+    color: #C51104;
+    text-decoration: none;
+}
+
+.maker a:hover{
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.maker a:hover::before{
+    color: #FF4033;
+    content:"Portfolio:  ";
+    text-decoration: underline;
+}
+
+.maker .made{
+    padding: 5px;
+}
+
+/* Developer Info Ends Here */

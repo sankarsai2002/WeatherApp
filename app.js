@@ -1,16 +1,11 @@
 import {getLocation,getWeatherInfo} from "./getCurrentLocation/getLocation.js";
 
-import {insertingTodayData,insertingWeekData} from "./getCurrentLocation/insertingData.js";
-
-import {fetchingWeather,cityIdentification} from "./getCurrentLocation/fetchingData.js";
-
 import {celTofah,fahTocel} from "./getCurrentLocation/unitConversions.js";
+
 
 (function(){
     getLocation();
 })()
-
-let searchBtn = document.getElementById("searchBtn");
 
 searchBtn.addEventListener("click",()=>{
     let val = document.getElementById("inputLocation").value.trim();
@@ -61,8 +56,7 @@ document.getElementById("celsiusBtn").addEventListener("click",()=>{
     
 });
 
-document.getElementById("fahrenheitBtn").addEventListener("click",(e)=>{
-    // e.classList.add("unitActive");
+document.getElementById("fahrenheitBtn").addEventListener("click",()=>{
     document.getElementById("fahrenheitBtn").classList.add("unitActive");
     document.getElementById("celsiusBtn").classList.remove("unitActive");
 
