@@ -1,7 +1,6 @@
 function linksOnTime(jsonData,time1,time2){
     let date1 = jsonData.days[0].datetime.split('-');
-    let dateStamp1 =  new Date(date1[0],date1[1]-1,date1[2],...time1);
-    // console.log(dateStamp1);   
+    let dateStamp1 =  new Date(date1[0],date1[1]-1,date1[2],...time1);  
 
     let dateStamp2 = new Date(date1[0],date1[1]-1,date1[2],...time2);
 

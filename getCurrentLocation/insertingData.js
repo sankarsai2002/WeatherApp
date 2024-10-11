@@ -3,7 +3,6 @@ import {linksOnTime , linksOnWeek} from "./LinksBasedOnTime.js";
 import insertHighlights from "./insertingHighlightsData.js";
 
 function insertingTodayData(jsonData){
-    // console.log("inserting today");
     let eachHour = document.querySelectorAll("[id^='eachHour']");
     let eachConditon = document.querySelectorAll("[id^='eachConditon']");
     let eachTemp = document.querySelectorAll("[id^='eachTemp']");
@@ -32,8 +31,6 @@ function insertingTodayData(jsonData){
 }
 
 function insertingWeekData(jsonData){
-    // console.log("Inserting week");
-
     let eachWeek = document.querySelectorAll("[id^='eachWeek']");
     let eachconditonweek = document.querySelectorAll("[id^='eachconditonweek']");
     let eachweekTemp = document.querySelectorAll("[id^='eachweekTemp']");
@@ -41,7 +38,6 @@ function insertingWeekData(jsonData){
     let ymd = jsonData.days[0].datetime.split("-");
     let date = new Date(ymd[0],ymd[1]-1,ymd[2]);
     let weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
     
     let i = 0;
     eachWeek.forEach((value)=>{
@@ -55,8 +51,7 @@ function insertingWeekData(jsonData){
         value.setAttribute("src",dayWeatherIconSRC);
         i++;
     });
-    
-    // 23°<div class="degree">C</div>
+
     i = 0;
     eachweekTemp.forEach((value)=>{
         value.innerHTML = jsonData.days[i].temp+"°C";

@@ -7,18 +7,29 @@ import {celTofah,fahTocel} from "./getCurrentLocation/unitConversions.js";
     getLocation();
 })()
 
-searchBtn.addEventListener("click",()=>{
+function validate(){
     let val = document.getElementById("inputLocation").value.trim();
     if(val.length==0){
         alert("Please enter a valid location");
-        // console.log("Entered IF");
     }
     else{
         getWeatherInfo(val);
-        
     }
     document.getElementById("inputLocation").value = "";
+}
+
+searchBtn.addEventListener("click",()=>{
+    console.log("Clicked");
+    validate();
 });
+
+document.getElementById("inputLocation").onkeydown = (e)=>{
+    if(e.key === 'Enter'){
+        console.log("enter pressed");
+        
+        validate();
+    }
+}
 
 document.getElementById("weekBtn").addEventListener("click",()=>{
     document.querySelector(".todayBtn").classList.remove("selected");

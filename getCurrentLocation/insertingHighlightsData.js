@@ -38,12 +38,11 @@ export default function insertHighlights(jsonData){
     visibilityValue.innerHTML = jsonData.currentConditions.visibility;
     visibleStatus.innerHTML = visibilityStatus(jsonData);
 
+    // Inserting Air Quality Information
     let airQualityValue = document.getElementById("highLightInfo6");
     let airQuaStatus = document.getElementById("subHighLightFoot6");
-
     let stationName = jsonData.currentConditions.stations[0];
     airQualityValue.innerHTML = jsonData.stations[stationName].quality;
     airQuaStatus.innerHTML = airQualityStatus(jsonData);
-    // airQualityValue.innerHTML = jsonData.stations[0];
 }
 
