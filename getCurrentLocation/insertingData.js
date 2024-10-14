@@ -28,6 +28,16 @@ function insertingTodayData(jsonData){
 
     insertingWeekData(jsonData);
     insertHighlights(jsonData)
+
+    //Fixing default Temperature as Celcius
+    document.getElementById("celsiusBtn").classList.add("unitActive");
+    document.getElementById("fahrenheitBtn").classList.remove("unitActive");
+
+    //Fixing defaultt as Days
+    document.querySelector(".todayBtn").classList.add("selected");
+    document.querySelector(".weekBtn").classList.remove("selected");
+    document.querySelector(".Weeks").classList.add("hideTemp");
+    document.querySelector(".Hours").classList.remove("hideTemp");
 }
 
 function insertingWeekData(jsonData){

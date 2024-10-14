@@ -15,11 +15,10 @@ function validate(){
     else{
         getWeatherInfo(val);
     }
-    // document.getElementById("inputLocation").value = "";
+    document.getElementById("inputLocation").value = val.toUpperCase();
 }
 
 searchBtn.addEventListener("click",()=>{
-    console.log("Clicked");
     validate();
 });
 

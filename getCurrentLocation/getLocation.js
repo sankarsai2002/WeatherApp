@@ -10,7 +10,6 @@ import  {fetchingWeather,cityIdentification} from "./fetchingData.js";
 async function getWeatherInfo(city){
     let rawData = await fetchingWeather(city);
     let jsonData = await rawData.json();
-    console.log(jsonData);
 
     let time1 = jsonData.currentConditions.datetime.split(":");//current Time
     let time2 = jsonData.currentConditions.sunset.split(":");//sunset Time
