@@ -15,7 +15,7 @@ function validate(){
     else{
         getWeatherInfo(val);
     }
-    document.getElementById("inputLocation").value = "";
+    // document.getElementById("inputLocation").value = "";
 }
 
 searchBtn.addEventListener("click",()=>{
